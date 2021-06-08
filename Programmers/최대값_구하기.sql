@@ -1,0 +1,3 @@
+-- 분류: SUM, MAX, MIN
+-- 단계: Level 2
+SELECT MAX(DATETIME) FROM ANIMAL_INS;
