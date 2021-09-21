@@ -1,4 +1,4 @@
-# BOJ1260
+# BOJ1260(bfs, dfs)
 
 from sys import stdin
 from collections import deque
@@ -38,8 +38,23 @@ def dfs(v, visited=[]):
     visited.append(v)
     print(v, end = " ")
 
-    for i in range(len(graph[v])):
+    for i in range(len(graph[v])):  # 여기서는 len(graph[v]) == n
         if graph[v][i] == 1 and (i not in visited):
             dfs(i, visited)
-            
-#========================================================================
+
+def bfs(v, visited=[]):
+    visited = [v] # 확인한 노드
+    queue = deque()
+    queue.append(v) # 확인할 노드
+
+    while queue:
+        v = queue.popleft()
+        print(v, end = " ")
+        for i in range(len(graph[v])):
+            if graph[v][i] == 1 and (i not in visited):
+                visited.append(i)
+                queue.append(i)
+
+dfs(v)
+print()
+bfs(v)
