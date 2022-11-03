@@ -26,6 +26,7 @@ def print_from_stream(
     n: int, 
     stream_name: Union[Type[OddStream], Type[EvenStream]] = EvenStream()
 ) -> None:
+    stream_name.__init__()
     for _ in range(int(n)):
         print(stream_name.get_next())
 
