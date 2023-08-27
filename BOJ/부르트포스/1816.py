@@ -9,10 +9,10 @@ T = int(input())
 
 # 간소화
 # def validate_password(password):
-#    return next(("NO" for n in range(2, 1000000) if password % n == 0), "YES")
+#    return next(("NO" for n in range(2, 1000001) if password % n == 0), "YES")
 
 def validate_password(password):
-    for n in range(2, 1000000):
+    for n in range(2, 1000001):
         if password % n == 0:
             return "NO"
     return "YES"
