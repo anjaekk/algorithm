@@ -36,6 +36,7 @@ def flag_game_v1():
     return flag.count("W")
 
 
+
 def flag_game_v2():
     N = int(input()) # 선수와 깃발 개수
     if N < 3:
@@ -46,4 +47,9 @@ def flag_game_v2():
         if i**2 > N:
             return i-1
 
-print(flag_game_v2())
+#루트 값으로 간편하게 구하기
+def flag_game_v3():
+    N = int(input()) # 선수와 깃발 개수
+    return int(N**0.5)
+
+print(flag_game_v3())
